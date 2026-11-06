@@ -4,6 +4,8 @@ sqlalchemy[asyncio]==2.0.30
 asyncpg==0.29.0
 aiosqlite==0.20.0
 pydantic-settings==2.2.1
+# Required by pydantic's EmailStr (used in participant schemas).
+email-validator>=2.0.0
 pyjwt==2.8.0
 bcrypt==4.1.3
 python-dotenv==1.0.1
@@ -12,3 +14,6 @@ transformers==4.41.2
 torch==2.3.1 --index-url https://download.pytorch.org/whl/cpu
 python-multipart==0.0.9
 httpx==0.27.0
+
+# Testing (pytest-only end-to-end + unit suite in backend/tests/).
+pytest>=7.4.0
